@@ -1,0 +1,4 @@
+cron:
+- description: run that thing we wanted
+  url: /tasks/mytask
+  schedule: every 1 minute

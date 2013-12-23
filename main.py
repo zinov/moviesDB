@@ -16,12 +16,17 @@
 #
 import webapp2
 import logging
+import routes
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 		logging.info("hello5")
 		self.response.write('Hello from version 4. I want to make a change here')
 
-app = webapp2.WSGIApplication([
-    ('/', MainHandler)
-], debug=True)
+
+class TaskHandler(webapp2.RequestHandler):
+    def get(self):
+		logging.info("hello from a task")
+
+
+app = webapp2.WSGIApplication(routes_array, debug=True)
