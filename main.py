@@ -19,7 +19,7 @@ import logging
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-		logging.info("hello2")
+		logging.info("hello3")
 		self.response.write('Hello from version 2')
 
 app = webapp2.WSGIApplication([
