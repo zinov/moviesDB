@@ -20,7 +20,7 @@ import logging
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 		logging.info("hello5")
-		self.response.write('Hello from version 2')
+		self.response.write('Hello from version 2. I want to make a change here')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
