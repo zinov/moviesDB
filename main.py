@@ -16,7 +16,6 @@
 #
 import webapp2
 import logging
-import routes
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -28,5 +27,10 @@ class TaskHandler(webapp2.RequestHandler):
     def get(self):
 		logging.info("hello from a task")
 
+
+routes_array = [
+    ('/', MainHandler), 
+    ('/tasks/mytask', TaskHandler)
+]
 
 app = webapp2.WSGIApplication(routes_array, debug=True)
